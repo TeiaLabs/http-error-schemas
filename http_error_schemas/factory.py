@@ -1,4 +1,4 @@
-import schemas
+from . import schemas
 
 HTTP_ERRORS = {
     422: schemas.RequestValidationError,
