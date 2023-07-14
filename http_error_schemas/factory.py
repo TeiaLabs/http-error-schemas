@@ -1,3 +1,4 @@
+from typing import TypedDict
 from . import schemas
 
 HTTP_ERRORS = {
@@ -5,6 +6,7 @@ HTTP_ERRORS = {
     409: schemas.ConflictError,
     401: schemas.UnauthorizedError,
     404: schemas.NotFoundError,
+    500: TypedDict("InternalServerError", {"detail": str}),
 }
 
 
